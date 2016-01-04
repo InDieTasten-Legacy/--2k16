@@ -148,6 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="IDT\EXP\Level\Universe.cpp" />
     <ClCompile Include="IDT\EXP\Processing\GameEngine.cpp" />
     <ClCompile Include="IDT\EXP\Processing\main.cpp" />
     <ClCompile Include="IDT\EXP\Utility\BaseLogger.cpp" />

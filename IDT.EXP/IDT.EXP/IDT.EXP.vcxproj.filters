@@ -27,6 +27,9 @@
     <ClCompile Include="IDT\EXP\Processing\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IDT\EXP\Level\Universe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IDT\EXP\Utility\BaseLogger.hpp">
