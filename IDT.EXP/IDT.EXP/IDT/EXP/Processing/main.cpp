@@ -13,6 +13,7 @@ int main()
 	BaseLogger* logger = new StandardLogger();
 	{
 		GameEngine engine(*logger);
+		engine.Init();
 	}
 	delete logger;
 	logger = nullptr;

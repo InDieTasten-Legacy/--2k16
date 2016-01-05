@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../Level/Universe.hpp"
+#include "Renderer.hpp"
 #include "SFML\Graphics.hpp"
 #include "../Utility/BaseLogger.hpp"
 
@@ -20,9 +21,12 @@ namespace IDT
 				BaseLogger& logger;
 				Universe currentUniverse;
 				RenderWindow renderWindow;
+				Renderer renderer;
 			public:
 				GameEngine(BaseLogger& logger);
 				~GameEngine();
+
+				void Init();
 			};
 		}
 	}

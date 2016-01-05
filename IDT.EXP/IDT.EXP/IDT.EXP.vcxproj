@@ -151,12 +151,14 @@
     <ClCompile Include="IDT\EXP\Level\Universe.cpp" />
     <ClCompile Include="IDT\EXP\Processing\GameEngine.cpp" />
     <ClCompile Include="IDT\EXP\Processing\main.cpp" />
+    <ClCompile Include="IDT\EXP\Processing\Renderer.cpp" />
     <ClCompile Include="IDT\EXP\Utility\BaseLogger.cpp" />
     <ClCompile Include="IDT\EXP\Utility\StandardLogger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IDT\EXP\Processing\GameEngine.hpp" />
     <ClInclude Include="IDT\EXP\Level\Universe.hpp" />
+    <ClInclude Include="IDT\EXP\Processing\Renderer.hpp" />
     <ClInclude Include="IDT\EXP\Utility\BaseLogger.hpp" />
     <ClInclude Include="IDT\EXP\Utility\Conversion.hpp" />
     <ClInclude Include="IDT\EXP\Utility\StandardLogger.hpp" />
