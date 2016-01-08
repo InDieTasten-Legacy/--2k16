@@ -1,6 +1,4 @@
 #include "StandardLogger.hpp"
-//#include <chrono>
-//#include <ctime>
 
 IDT::EXP::Utility::StandardLogger::StandardLogger() : BaseLogger()
 {
@@ -14,10 +12,14 @@ IDT::EXP::Utility::StandardLogger::~StandardLogger()
 
 void IDT::EXP::Utility::StandardLogger::log(string message)
 {
-	/*using std::chrono::system_clock;
-	system_clock::time_point today = system_clock::now();
-	std::time_t tt;
-	tt = system_clock::to_time_t(today);*/
+	Lock lock(mtxLog);
 
-	std::cout << /*ctime(&tt) << " " +*/ message << std::endl;
+	static short threadCount = 0;
+
+	if (!thisThread)
+	{
+		thisThread = new short(threadCount++);
+	}
+
+	std::cout << "<" << *thisThread << ">" << message << std::endl;
 }
