@@ -2,6 +2,7 @@
 
 #include "../Level/Universe.hpp"
 #include "Renderer.hpp"
+#include "EventManager.hpp"
 #include "SFML\Graphics.hpp"
 #include "../Utility/BaseLogger.hpp"
 
@@ -22,6 +23,7 @@ namespace IDT
 				Universe currentUniverse;
 				RenderWindow renderWindow;
 				Renderer renderer;
+				EventManager eventManager;
 			public:
 				GameEngine(BaseLogger& logger);
 				~GameEngine();

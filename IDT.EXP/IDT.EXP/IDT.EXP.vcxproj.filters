@@ -33,6 +33,9 @@
     <ClCompile Include="IDT\EXP\Processing\Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IDT\EXP\Processing\EventManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IDT\EXP\Utility\BaseLogger.hpp">
@@ -51,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IDT\EXP\Processing\Renderer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDT\EXP\Processing\EventManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

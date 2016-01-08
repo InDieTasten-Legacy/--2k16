@@ -149,6 +149,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="IDT\EXP\Level\Universe.cpp" />
+    <ClCompile Include="IDT\EXP\Processing\EventManager.cpp" />
     <ClCompile Include="IDT\EXP\Processing\GameEngine.cpp" />
     <ClCompile Include="IDT\EXP\Processing\main.cpp" />
     <ClCompile Include="IDT\EXP\Processing\Renderer.cpp" />
@@ -156,6 +157,7 @@
     <ClCompile Include="IDT\EXP\Utility\StandardLogger.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IDT\EXP\Processing\EventManager.hpp" />
     <ClInclude Include="IDT\EXP\Processing\GameEngine.hpp" />
     <ClInclude Include="IDT\EXP\Level\Universe.hpp" />
     <ClInclude Include="IDT\EXP\Processing\Renderer.hpp" />
