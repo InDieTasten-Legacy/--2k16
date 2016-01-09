@@ -1,8 +1,10 @@
 #include "EventManager.hpp"
 
-IDT::EXP::Processing::EventManager::EventManager(BaseLogger & logger)
+IDT::EXP::Processing::EventManager::EventManager(RenderWindow& renderWindow, BaseLogger & logger)
 	:
-	logger(logger)
+	logger(logger),
+	renderWindow(renderWindow),
+	Events(logger)
 {
 	logger.Info("EventManager has been constructed: " + Conversion::ToString(this));
 }
@@ -12,8 +14,8 @@ IDT::EXP::Processing::EventManager::~EventManager()
 	if (running)
 	{
 		logger.Warning("Destruction of EventManager initializes Stop of Event Handling");
-		running = false;
-		Lock lock(mtxRunning);
+		Stop();
+		sleep(seconds(2));
 	}
 	logger.Info("EventManager has been destructed:  " + Conversion::ToString(this));
 }
@@ -38,7 +40,6 @@ void IDT::EXP::Processing::EventManager::Stop()
 	{
 		logger.Info("Initializing stop of EventManager");
 		running = false;
-		Lock lock(mtxRunning);
 		logger.Info("EventManager has been stopped");
 	}
 	else
@@ -55,15 +56,23 @@ bool IDT::EXP::Processing::EventManager::IsRunning()
 void IDT::EXP::Processing::EventManager::handle()
 {
 	logger.Info("EventManager has been started");
-	Lock lock(mtxRunning);
-
+	
+	Event event;
+	
 	while (running)
 	{
-		sleep(seconds(5));
-		
-		logger.Info("EventManager will be stopped");
-		lock.~Lock();
-		Stop();
+		while (renderWindow.pollEvent(event))
+		{
+			switch (event.type)
+			{
+			case sf::Event::Closed:
+				Events.Closed.Raise(0);
+				break;
+			case sf::Event::KeyPressed:
+				Events.KeyPressed.Raise(event.key);
+				break;
+			}
+		}
 	}
-
+	logger.Info("EventManager will be stopped");
 }

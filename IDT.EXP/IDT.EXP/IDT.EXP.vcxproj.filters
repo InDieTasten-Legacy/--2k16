@@ -59,5 +59,8 @@
     <ClInclude Include="IDT\EXP\Processing\EventManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IDT\EXP\Utility\EventHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
