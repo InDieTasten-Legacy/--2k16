@@ -163,7 +163,9 @@
     <ClInclude Include="IDT\EXP\Processing\Renderer.hpp" />
     <ClInclude Include="IDT\EXP\Utility\BaseLogger.hpp" />
     <ClInclude Include="IDT\EXP\Utility\Conversion.hpp" />
-    <ClInclude Include="IDT\EXP\Utility\EventHandler.hpp" />
+    <ClInclude Include="IDT\EXP\Utility\EventRegister.hpp" />
+    <ClInclude Include="IDT\EXP\Utility\EventType.hpp" />
+    <ClInclude Include="IDT\EXP\Utility\IEventRegister.hpp" />
     <ClInclude Include="IDT\EXP\Utility\StandardLogger.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

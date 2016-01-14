@@ -4,7 +4,8 @@ IDT::EXP::Processing::EventManager::EventManager(RenderWindow& renderWindow, Bas
 	:
 	logger(logger),
 	renderWindow(renderWindow),
-	Events(logger)
+	internalEvents(logger),
+	Events(logger, internalEvents)
 {
 	logger.Info("EventManager has been constructed: " + Conversion::ToString(this));
 }
@@ -66,10 +67,10 @@ void IDT::EXP::Processing::EventManager::handle()
 			switch (event.type)
 			{
 			case sf::Event::Closed:
-				Events.Closed.Raise(0);
+				internalEvents.Closed.Raise(0);
 				break;
 			case sf::Event::KeyPressed:
-				Events.KeyPressed.Raise(event.key);
+				internalEvents.KeyPressed.Raise(event.key);
 				break;
 			}
 		}
