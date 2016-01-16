@@ -31,9 +31,9 @@ namespace IDT
 				{
 					events(BaseLogger& logger)
 						:
-						JoyStickButtonPressed(logger),
-						JoyStickButtonReleased(logger),
-						JoyStickConnected(logger),
+						JoystickButtonPressed(logger),
+						JoystickButtonReleased(logger),
+						JoystickConnected(logger),
 						JoystickDisconnected(logger),
 						JoystickMoved(logger),
 						KeyPressed(logger),
@@ -51,9 +51,9 @@ namespace IDT
 						TouchEnded(logger),
 						Closed(logger)
 					{}
-					EventType<Event::JoystickButtonEvent&> JoyStickButtonPressed;
-					EventType<Event::JoystickButtonEvent&> JoyStickButtonReleased;
-					EventType<Event::JoystickConnectEvent&> JoyStickConnected;
+					EventType<Event::JoystickButtonEvent&> JoystickButtonPressed;
+					EventType<Event::JoystickButtonEvent&> JoystickButtonReleased;
+					EventType<Event::JoystickConnectEvent&> JoystickConnected;
 					EventType<Event::JoystickConnectEvent&> JoystickDisconnected;
 					EventType<Event::JoystickMoveEvent&> JoystickMoved;
 					EventType<Event::KeyEvent&> KeyPressed;
@@ -80,9 +80,9 @@ namespace IDT
 				{
 					Events(BaseLogger& logger, events& evs)
 						:
-						JoyStickButtonPressed(logger, evs.JoyStickButtonPressed),
-						JoyStickButtonReleased(logger, evs.JoyStickButtonReleased),
-						JoyStickConnected(logger, evs.JoyStickConnected),
+						JoystickButtonPressed(logger, evs.JoystickButtonPressed),
+						JoystickButtonReleased(logger, evs.JoystickButtonReleased),
+						JoystickConnected(logger, evs.JoystickConnected),
 						JoystickDisconnected(logger, evs.JoystickDisconnected),
 						JoystickMoved(logger, evs.JoystickMoved),
 						KeyPressed(logger, evs.KeyPressed),
@@ -100,9 +100,9 @@ namespace IDT
 						TouchEnded(logger, evs.TouchEnded),
 						Closed(logger, evs.Closed)
 					{}
-					EventRegister<Event::JoystickButtonEvent&> JoyStickButtonPressed;
-					EventRegister<Event::JoystickButtonEvent&> JoyStickButtonReleased;
-					EventRegister<Event::JoystickConnectEvent&> JoyStickConnected;
+					EventRegister<Event::JoystickButtonEvent&> JoystickButtonPressed;
+					EventRegister<Event::JoystickButtonEvent&> JoystickButtonReleased;
+					EventRegister<Event::JoystickConnectEvent&> JoystickConnected;
 					EventRegister<Event::JoystickConnectEvent&> JoystickDisconnected;
 					EventRegister<Event::JoystickMoveEvent&> JoystickMoved;
 					EventRegister<Event::KeyEvent&> KeyPressed;
