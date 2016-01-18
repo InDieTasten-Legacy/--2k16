@@ -167,6 +167,12 @@
     <ClInclude Include="IDT\EXP\Utility\EventType.hpp" />
     <ClInclude Include="IDT\EXP\Utility\IEventRegister.hpp" />
     <ClInclude Include="IDT\EXP\Utility\StandardLogger.hpp" />
+    <ClInclude Include="IDT\GUI\Canvas.hpp" />
+    <ClInclude Include="IDT\GUI\Controls\Button.hpp" />
+    <ClInclude Include="IDT\GUI\GuiManager.hpp" />
+    <ClInclude Include="IDT\GUI\BaseControl.hpp" />
+    <ClInclude Include="IDT\GUI\BaseMenu.hpp" />
+    <ClInclude Include="IDT\GUI\Menus\MessageBox.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -68,5 +68,23 @@
     <ClInclude Include="IDT\EXP\Utility\EventRegister.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IDT\GUI\GuiManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDT\GUI\BaseControl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDT\GUI\BaseMenu.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDT\GUI\Canvas.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDT\GUI\Controls\Button.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDT\GUI\Menus\MessageBox.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
