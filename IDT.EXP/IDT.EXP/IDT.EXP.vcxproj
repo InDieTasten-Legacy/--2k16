@@ -155,6 +155,10 @@
     <ClCompile Include="IDT\EXP\Processing\Renderer.cpp" />
     <ClCompile Include="IDT\EXP\Utility\BaseLogger.cpp" />
     <ClCompile Include="IDT\EXP\Utility\StandardLogger.cpp" />
+    <ClCompile Include="IDT\GUI\BaseControl.cpp" />
+    <ClCompile Include="IDT\GUI\BaseMenu.cpp" />
+    <ClCompile Include="IDT\GUI\Canvas.cpp" />
+    <ClCompile Include="IDT\GUI\GuiManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IDT\EXP\Processing\EventManager.hpp" />
