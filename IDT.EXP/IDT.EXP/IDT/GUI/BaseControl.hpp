@@ -8,13 +8,16 @@ namespace IDT
 {
 	namespace GUI
 	{
-		class BaseControl : Drawable
+		class BaseControl : public Drawable
 		{
+		private:
+			int top;
+			int left;
+			int height;
+			int width;
+			bool isVisible;
 		public:
-			virtual void Hide();
-			virtual void Show();
-			virtual void Enable();
-			virtual void Disable();
+			virtual void draw(RenderTarget& target, RenderStates states) const;
 		};
 	}
 }
