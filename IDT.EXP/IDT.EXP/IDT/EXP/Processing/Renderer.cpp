@@ -1,10 +1,14 @@
 #include "Renderer.hpp"
 
-IDT::EXP::Processing::Renderer::Renderer(BaseLogger & logger)
+IDT::EXP::Processing::Renderer::Renderer(BaseLogger & logger, RenderWindow& target)
 	:
 	logger(logger),
-	renderThread(&IDT::EXP::Processing::Renderer::render, this)
+	renderThread(&IDT::EXP::Processing::Renderer::render, this),
+	target(target),
+	internalEvents(logger),
+	Events(logger, internalEvents)
 {
+	target.setActive(true);
 	logger.Info("Renderer has been constructed: " + Conversion::ToString(this));
 }
 
@@ -43,9 +47,14 @@ void IDT::EXP::Processing::Renderer::render()
 {
 	logger.Info("Rendering thread has been launched");
 
+	DrawEvent drawEvent(target);
+	
+
 	while (running)
 	{
-		sleep(sf::seconds(1));
+		drawEvent.states = RenderStates();
+		internalEvents.OnRenderFrame.Raise(drawEvent);
+		target.clear(Color::Black);
 	}
 
 	logger.Info("Rendering thread will be terminated");

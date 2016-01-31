@@ -5,9 +5,11 @@
 #include "EventManager.hpp"
 #include "SFML\Graphics.hpp"
 #include "../Utility/BaseLogger.hpp"
+#include "../../GUI/GuiManager.hpp"
 
 using namespace IDT::EXP::Utility;
 using namespace IDT::EXP::Level;
+using namespace IDT::GUI;
 using namespace sf;
 
 namespace IDT
@@ -24,6 +26,7 @@ namespace IDT
 				RenderWindow renderWindow;
 				Renderer renderer;
 				EventManager eventManager;
+				GuiManager guiManager;
 			public:
 				GameEngine(BaseLogger& logger);
 				~GameEngine();
